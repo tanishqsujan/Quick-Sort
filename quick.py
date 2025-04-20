@@ -1,13 +1,21 @@
+#function to find the partition position
 def partition(A, low, high):
     
+    #choosing the right most element as the pivot
     pivot= A[high]
     
+    #pointer for greater element
     i= low - 1
     
+    #compare each element with the pivot
     for j in range(low, high):
         if A[j] <= pivot:
+            
+            #if element smaller than the pivot is found
+            #swap it with the greater element pointed by i
             i= i + 1
             
+            #swapping element at i with element at j
             (A[i], A[j]) = (A[j], A[i])
      
      #swap the pivot element with the greater element specified by i       
